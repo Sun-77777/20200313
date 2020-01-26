@@ -5,12 +5,13 @@
 int main()
 {
 	int n = 0;
+	int ret = 0;
 	scanf("%d", &n);
-	int ret = judgesushu(n);
-	if (ret == 1)
-		printf("是素数\n", ret);
-	else if (ret == 0)
-		printf("不是素数\n", ret);
+	ret = judgesushu(n);
+	if (ret == 0)
+		printf("是素数\n");
+	else 
+		printf("不是素数\n");
 	return 0;
 }
 int judgesushu(int x)
@@ -20,11 +21,8 @@ int judgesushu(int x)
 	{
 		if (x%i == 0)
 		{
-			return 0;
-		}
-		else
-		{
 			return 1;
-		}
+		}	
 	}
+	return 0;
 }
