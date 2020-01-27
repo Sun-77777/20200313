@@ -5,6 +5,69 @@
 #include <time.h>
 #include <math.h>
 //#include <Windows.h>
+//猜数字游戏
+void menu()
+{
+	printf("*******************\n");
+	printf("******1.play ******\n");
+	printf("******0.exit ******\n");
+	printf("*******************\n");
+
+}
+void game()
+{
+	//RAND_MAX 0x7fff  32767
+	//1.生成随机数
+
+	int ret = rand() % 100 + 1;//1-100之间
+	//printf("%d\n", ret);
+	//2.猜数字
+	while (1)
+	{
+		int num = 0;
+		printf("请猜数字：->");
+		scanf("%d", &num);
+		if (num > ret)
+		{
+			printf("猜大了！！\n");
+		}
+		else if (num < ret)
+		{
+			printf("猜小了！！\n");
+		}
+		else
+		{
+			printf("恭喜你，猜对了！！！\n");
+			break;
+
+		}
+
+	}
+}
+int main()
+{
+	int input = 0;
+	srand((unsigned int)time(NULL));
+	do
+	{
+		menu();
+		printf("请输入选择：->");
+		scanf("%d", &input);
+		switch (input)
+		{
+		case 1:
+			game();
+			break;
+		case 0:
+			break;
+		default:
+			printf("选择错误\n");
+			break;
+		}
+	} while (input);
+
+	return 0;
+}
 
 //水仙花数
 //int main()
@@ -96,69 +159,7 @@
 //	}
 //	return 0;
 //}
-//猜数字游戏
-void menu()
-{
-	printf("*******************\n");
-	printf("******1.play ******\n");
-	printf("******0.exit ******\n");
-	printf("*******************\n");
 
-}
-void game()
-{
-	//RAND_MAX 0x7fff  32767
-	//1.生成随机数
-	
-	int ret = rand()%100+1;//1-100之间
-	//printf("%d\n", ret);
-	//2.猜数字
-	while (1)
-	{
-		int num = 0;
-		printf("请猜数字：->");
-		scanf("%d", &num);
-		if (num > ret)
-		{
-			printf("猜大了！！\n");
-		}
-		else if (num < ret)
-		{
-			printf("猜小了！！\n");
-		}
-		else
-		{
-			printf("恭喜你，猜对了！！！\n");
-			break;
-
-		}
-		
-	}
-}
-int main()
-{
-	int input = 0;
-	srand((unsigned int)time(NULL));
-	do
-	{
-		menu();
-		printf("请输入选择：->");
-		scanf("%d", &input);
-		switch (input)
-		{
-		case 1:
-			game();
-			break;
-		case 0:
-			break;
-		default:
-			printf("选择错误\n");
-			break;
-		}
-	} while (input);
-
-		return 0;
-}
 
 //二分查找
 //int BinarySearch(int arr[], int k, int sz)
