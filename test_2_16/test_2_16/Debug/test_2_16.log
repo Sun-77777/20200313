@@ -1,0 +1,14 @@
+﻿  test.c
+d:\cccccccode\test\test_2_16\test_2_16\test.c(21): warning C4047: “函数”:“const char *”与“char (*)[6]”的间接级别不同
+d:\cccccccode\test\test_2_16\test_2_16\test.c(21): warning C4024: “strlen”: 形参和实参 1 的类型不同
+d:\cccccccode\test\test_2_16\test_2_16\test.c(22): warning C4047: “函数”:“const char *”与“char (*)[6]”的间接级别不同
+d:\cccccccode\test\test_2_16\test_2_16\test.c(22): warning C4024: “strlen”: 形参和实参 1 的类型不同
+d:\cccccccode\test\test_2_16\test_2_16\test.c(40): warning C4047: “函数”:“const char *”与“char (*)[7]”的间接级别不同
+d:\cccccccode\test\test_2_16\test_2_16\test.c(40): warning C4024: “strlen”: 形参和实参 1 的类型不同
+d:\cccccccode\test\test_2_16\test_2_16\test.c(41): warning C4047: “函数”:“const char *”与“char (*)[7]”的间接级别不同
+d:\cccccccode\test\test_2_16\test_2_16\test.c(41): warning C4024: “strlen”: 形参和实参 1 的类型不同
+d:\cccccccode\test\test_2_16\test_2_16\test.c(59): warning C4047: “函数”:“const char *”与“char **”的间接级别不同
+d:\cccccccode\test\test_2_16\test_2_16\test.c(59): warning C4024: “strlen”: 形参和实参 1 的类型不同
+d:\cccccccode\test\test_2_16\test_2_16\test.c(60): warning C4047: “函数”:“const char *”与“char **”的间接级别不同
+d:\cccccccode\test\test_2_16\test_2_16\test.c(60): warning C4024: “strlen”: 形参和实参 1 的类型不同
+  test_2_16.vcxproj -> D:\cccccccode\test\test_2_16\Debug\test_2_16.exe
