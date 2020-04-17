@@ -1,3 +1,5 @@
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Stack;
 
 public class StackQueueInterview {
@@ -5,6 +7,10 @@ public class StackQueueInterview {
         if (s.isEmpty()) {
             return true;
         }
+        Map<Character,Character> map = new HashMap<>();
+        map.put(')','(');
+        map.put(']','[');
+        map.put('{','}');
         Stack<Character> stack = new Stack<>();
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
@@ -17,7 +23,12 @@ public class StackQueueInterview {
                 return false;
             }
             Character top = stack.pop();
-            if (top == '(' && c == ')') {
+
+            if (map.get(c).equals(top)) {
+                continue;
+            }
+
+            /*if (top == '(' && c == ')') {
                 continue;
             }
             if (top == '[' && c == ']') {
@@ -25,7 +36,8 @@ public class StackQueueInterview {
             }
             if (top == '{' && c == '}') {
                 continue;
-            }
+            }*/
+
             //前面三个合法情况都没有命中，剩下的就只能是非法情况了
             return false;
         }
