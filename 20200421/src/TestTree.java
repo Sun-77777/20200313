@@ -27,10 +27,21 @@ public class TestTree {
         C.left = F;
         E.left = G;
 
+        return A;
     }
 
 
-    public static void main(String[] args) {
+    public static void preOrder(Node root) {
+        if (root == null) {
+            return;
+        }
+        System.out.print(root.val + " ");
+        preOrder(root.left);
+        preOrder(root.right);
+    }
 
+    public static void main(String[] args) {
+        Node root = build();
+        preOrder(root);
     }
 }
