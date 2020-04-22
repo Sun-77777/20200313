@@ -64,6 +64,19 @@ public class TestTree {
         getSize(root.right);
 
     }
+
+    public static int leafSize = 0;
+    public static void getLeafSize(Node root) {
+        if (root == null) {
+            return;
+        }
+        if (root.left == null && root.right == null) {
+            leafSize++;
+            return;
+        }
+        getLeafSize(root.left);
+        getLeafSize(root.right);
+    }
     public static void main(String[] args) {
         Node root = build();
         preOrder(root);
@@ -72,6 +85,8 @@ public class TestTree {
         System.out.println();
         lastOrder(root);
         System.out.println();
+        getLeafSize(root);
+        System.out.println(leafSize);
 //        getSize(root);
 //        System.out.println(sizeNode);
 
