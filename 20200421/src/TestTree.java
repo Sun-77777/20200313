@@ -77,7 +77,7 @@ public class TestTree {
         if (root == null) {
             return 0;
         }
-        int count = 0;
+
         //借助递归思想把问题拆分
         //整个树的节点个数= 根节点个数+左子树节点个数+右字数节点个数
         return 1 + size(root.left) + size(root.right);

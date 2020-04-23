@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e1c72389-19eb-4a9a-baef-31716c6ce604" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TestTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TestTree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../20200423/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../20200423/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../20200423/src/TestTree1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../20200423/src/TestTree1.java" afterDir="false" />
     </list>
@@ -17,14 +18,15 @@
     <session id="-945748814">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
+          <entry key="project.closed" value="9" />
+          <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.56" value="1" />
           <entry key="project.open.time.67" value="1" />
           <entry key="project.open.time.7" value="2" />
           <entry key="project.open.time.71" value="1" />
-          <entry key="project.open.time.77" value="1" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.open.time.77" value="2" />
+          <entry key="project.opened" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -54,8 +56,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/TestTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="56">
-              <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+            <state relative-caret-position="-700">
+              <caret line="79" column="8" selection-start-line="79" selection-start-column="8" selection-end-line="79" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -63,7 +65,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TreeInterview.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
+            <state relative-caret-position="308">
               <caret line="16" selection-start-line="16" selection-end-line="16" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -89,8 +91,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/TestTree.java" />
         <option value="$PROJECT_DIR$/src/TreeInterview.java" />
+        <option value="$PROJECT_DIR$/src/TestTree.java" />
       </list>
     </option>
   </component>
@@ -110,9 +112,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="395" />
-    <option name="y" value="182" />
-    <option name="width" value="1328" />
+    <option name="x" value="410" />
+    <option name="y" value="82" />
+    <option name="width" value="1330" />
     <option name="height" value="770" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -174,14 +176,16 @@
       <workItem from="1587296495438" duration="211000" />
       <workItem from="1587466937321" duration="5137000" />
       <workItem from="1587524528370" duration="1361000" />
+      <workItem from="1587617371432" duration="30000" />
+      <workItem from="1587618963803" duration="691000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19351000" />
+    <option name="totallyTimeSpent" value="20072000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="316" y="146" width="1062" height="616" extended-state="1" />
+    <frame x="328" y="66" width="1064" height="616" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.39694658" />
@@ -221,22 +225,22 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/TestTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-700">
+          <caret line="79" column="8" selection-start-line="79" selection-start-column="8" selection-end-line="79" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/TreeInterview.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
+        <state relative-caret-position="308">
           <caret line="16" selection-start-line="16" selection-end-line="16" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#261#262#0" expanded="true" />
             <element signature="e#299#300#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TestTree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
         </state>
       </provider>
     </entry>
