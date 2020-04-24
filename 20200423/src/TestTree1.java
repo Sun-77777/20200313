@@ -63,9 +63,7 @@ public class TestTree1 {
         if (root == null) {
             return 0;
         }
-        if (root.left == null && root.right == null) {
-            return 1;
-        }
+
         return 1 + getSize(root.left) + getSize(root.right);
     }
 
@@ -79,9 +77,19 @@ public class TestTree1 {
         return leafSize(root.left) + leafSize(root.right);
     }
 
+    public static int kSize(Node root,int k) {
+        if (root == null || k < 0) {
+            return 0;
+        }
+        if (k == 1) {
+            return 1;
+        }
+        return kSize(root.left,k-1) + kSize(root.right,k-1);
+    }
+
     public static void main(String[] args) {
         Node root = build();
-        int ret = leafSize(root);
+        int ret = getSize(root);
         System.out.println(ret);
 
 
