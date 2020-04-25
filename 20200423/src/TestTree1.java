@@ -87,6 +87,8 @@ public class TestTree1 {
         return kSize(root.left,k-1) + kSize(root.right,k-1);
     }
 
+
+
     public static void main(String[] args) {
         Node root = build();
         int ret = getSize(root);
