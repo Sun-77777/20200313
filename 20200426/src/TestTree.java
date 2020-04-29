@@ -1,7 +1,5 @@
 
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Stack;
+import java.util.*;
 
 public class TestTree {
     static class TreeNode {
@@ -12,6 +10,49 @@ public class TestTree {
         public TreeNode(int val) {
             this.val = val;
         }
+    }
+
+    public static List<Integer> preorder(TreeNode root) {
+        List<Integer> res = new ArrayList<>();
+        if (root == null) {
+            return res;
+        }
+        //访问根节点
+        res.add(root.val);
+        //递归访问左子树
+        //把参数中的集合里的所有元素都add到当前集合中
+        res.addAll(preorder(root.left));
+        res.addAll(preorder(root.right));
+        return res;
+
+    }
+
+    public static TreeNode result = null;
+    public static void find(TreeNode root,char toFind) {
+        if (root == null) {
+            return;
+        }
+        if (root.val == toFind) {
+            result = root;
+            return;
+        }
+        find(root.left,toFind);
+        find(root.right,toFind);
+    }
+
+    public static TreeNode find1(TreeNode root,char toFind) {
+        if (root == null) {
+            return null;
+        }
+        if (root.val == toFind) {
+            return root;
+        }
+        TreeNode ret = null;
+        ret = find1(root.left,toFind);
+        if (ret != null) {
+            return ret;
+        }
+        return find1(root.right,toFind);
     }
 
     public static void lastOrder(TreeNode root) {
@@ -89,9 +130,7 @@ public class TestTree {
         return sb.toString();
     }
     public static void helper(TreeNode t) {
-        if (t == null) {
-            return;
-        }
+
     }
 
 
