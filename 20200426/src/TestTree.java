@@ -12,6 +12,40 @@ public class TestTree {
         }
     }
 
+    public boolean isSameTree(TreeNode p, TreeNode q) {
+        if (p == null && q == null) {
+            return true;
+        }
+        if (p == null || q == null) {
+            return false;
+        }
+
+        return isSameTree(p.left,q.left) && isSameTree(p.right,q.right);
+    }
+
+    public static List<Integer> lastorder(TreeNode root) {
+        List<Integer> list = new ArrayList<>();
+        if (root == null) {
+            return list;
+        }
+        list.addAll(lastorder(root.left));
+        list.addAll(lastorder(root.right));
+        list.add(root.val);
+        return list;
+    }
+
+    public static List<Integer> inorder(TreeNode root) {
+        List<Integer> result = new ArrayList<>();
+        if (root == null) {
+            return result;
+        }
+
+        result.addAll(inorder(root.left));
+        result.add(root.val);
+        result.addAll(inorder(root.right));
+        return result;
+    }
+
     public static List<Integer> preorder(TreeNode root) {
         List<Integer> res = new ArrayList<>();
         if (root == null) {
