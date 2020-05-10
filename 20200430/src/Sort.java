@@ -79,7 +79,7 @@ public class Sort {
 
 
     //选择排序：每次从当前待排序区间中选取一个最小值，把最小值返回到bound位置上，同时bound ++
-    public static void selectSort(int[] array) {
+    public static void selectSort1(int[] array) {
         for (int bound = 0; bound < array.length; bound++) {
             for (int cur = bound+1; cur < array.length; cur++) {
                 if (array[cur] < array[bound]) {
@@ -96,7 +96,7 @@ public class Sort {
     }
     public static void main(String[] args) {
         int[] array = {9,4,6,8,2,1};
-        selectSort(array);
+        selectSort1(array);
         System.out.println(Arrays.toString(array));
     }
 }
