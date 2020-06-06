@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="test">
+    <insert id="addUser" parameterType="edu.xalead.entity.User">
+        insert into t_user(user,pwd) values(#{user},#{pwd});
+    </insert>
+    <!--
+    当参数类型是interesting，double，boolean，String 等基本类型时，#{}参数名可以随便写
+    -->
+
+    <select id="findUserById" parameterType="int" resultType="edu.xalead.entity.User">
+        select * from t_user where uid=#{id};
+    </select>
+
+    <!--
+    当查询的参数需要绑定到查询的字符串时，要使用${value}并且参数名只能为value
+    -->
+
+    <select id="findUserByName" parameterType="string" resultType="edu.xalead.entity.User">
+        select * from t_user where user like '%${value}%';
+    </select>
+
+    <select id="findUserByAccount" parameterType="map" resultType="edu.xalead.entity.User">
+        select * from t_user where user =# {user} and pwd = #{pwd};
+    </select>
+    
+    <delete id="delUserById" parameterType="int">
+        delete from t_user where uid= #{uid}
+    </delete>
+
+    <update id="updateUser" parameterType="edu.xalead.entity.User">
+        update t_user set user= #{user},pwd= #{pwd} where uid=#{uid};
+    </update>
+</mapper>

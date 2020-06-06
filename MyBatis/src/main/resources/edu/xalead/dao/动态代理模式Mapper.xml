@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.xalead.dao.动态代理模式">
+
+    <!--
+    当参数类型是interesting，double，boolean，String 等基本类型时，#{}参数名可以随便写
+    -->
+    <resultMap id="userMapper" type="edu.xalead.entity.User">
+        <id column="uid" property="id"/>
+        <result column="user" property="username"/>
+        <result column="pwd" property="password"/>
+    </resultMap>
+
+    <select id="findById" parameterType="int" resultMap="userMapper">
+        select * from t_user where uid=#{id};
+    </select>
+
+    <!--
+    当查询的参数需要绑定到查询的字符串时，要使用${value}并且参数名只能为value
+    -->
+
+    <delete id="delById" parameterType="int">
+        delete from t_user where uid= #{id}
+    </delete>
+
+    <select id="findAll" resultMap="userMapper">
+        select * from t_user;
+    </select>
+    
+    <update id="updateUser" parameterType="edu.xalead.entity.User">
+        update t_user set user=#{username},pwd=#{password} where uid=#{id}
+    </update>
+    
+    <select id="findUserByAccount" parameterType="map" resultMap="userMapper">
+        select * from t_user where user=#{user} and pwd=#{pwd};
+    </select>
+</mapper>
